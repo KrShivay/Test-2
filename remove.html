@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<title>Layout Display</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+
+a, span{
+ font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.container {
+	padding: 10px;
+	margin: 10px;
+}
+.post-container{
+	padding: 30px;
+	margin: 50px;
+}
+
+h1,h4{
+display: inline;
+}
+h4{
+color: gray;
+}
+
+hr{
+opacity: 0.2;
+}
+
+.post{
+padding: 10px;
+margin: 10px;
+}
+.heading-container {
+  display: flex;
+  justify-content: start;
+  margin: 10px;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+	margin-left: 20px
+	margin-right: 20px
+}
+.flex-container > div > h3{
+margin-top: 8px;
+margin-bottom: 8px;
+color: blue;
+}
+
+.flex-container >div > .box {
+  background-color: #f1f1f1;
+  width: 20rem;
+  height: 9rem;
+  margin: 2px;
+  line-height: 5;
+  text-align: center;
+  font-size: 30px;
+}
+button{
+background-color: red;
+color: white;
+margin: 5px;
+padding: 5px;
+}
+
+</style>
+</head>
+<body>
+<nav>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</nav>
+<div class= "container">
+<div class="heading-container">
+<div class="heading">
+<h1>Page Heading </h1>
+<h4> Secondary Text</h4>
+  </div>
+  
+</div>
+ <hr> 
+<div class= "post-container">
+
+<div class="flex-container">
+  <div class="post" id="post_1">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div1()">Remove</button>
+  </div>
+  <div class="post" id="post_2">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div2()">Remove</button>
+  </div>
+  <div class="post" id="post_3">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div3()">Remove</button>
+  </div>  
+</div>
+
+<div class="flex-container">
+    <div class="post" id="post_4">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div4()">Remove</button>
+  </div>
+  <div class="post" id="post_5">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div5()">Remove</button>
+  </div>
+  <div class="post" id="post_6">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div6()">Remove</button>
+  </div>  
+</div>
+
+<div class="flex-container">
+    <div class="post" id="post_7">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div7()">Remove</button>
+  </div>
+    <div class="post" id="post_8">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div8()">Remove</button>
+  </div>
+    <div class="post" id="post_9">
+  <div class="box">700*400</div>
+  <h3>Project Name</h3>
+  <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</a>
+  <br>
+  <button type="button" onclick="remove_div9()">Remove</button>
+  </div>
+</div>
+<div>
+
+<br>
+<span>Copyright &#169; your website 2014</span>
+</div>
+
+</body>
+
+<script>
+function remove_div1(){
+   document.getElementById('post_1').remove();
+}
+
+function remove_div2(){
+   document.getElementById('post_2').remove();
+}
+function remove_div3(){
+   document.getElementById('post_3').remove();
+}
+
+function remove_div4(){
+   document.getElementById('post_4').remove();
+}
+function remove_div5(){
+   document.getElementById('post_5').remove();
+}
+
+function remove_div6(){
+   document.getElementById('post_6').remove();
+}
+function remove_div7(){
+   document.getElementById('post_7').remove();
+}
+
+function remove_div8(){
+   document.getElementById('post_8').remove();
+}
+function remove_div9(){
+   document.getElementById('post_9').remove();
+}
+</script>
+
+</html>
